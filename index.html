@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <title>IAS Quiz</title>
+</head>
+
+<body>
+    <header>
+        Welcome to IAS Quiz </header>
+
+    <div class="container">
+
+        <form action="">
+
+            <div class="question" id="question1">
+                રૂડો ને રૂપાળો ગોરો ગોરો, માખણ જેવો છું,
+માં નો તો ભાઈ નહિ,પણ બાળકો નો વ્હાલો મામો છું.
+બોલો હું કોણ?
+                <div class="radio">
+                    <input type="radio" name="q1" id="q1o1" value="q1o1">
+                    <label for="q1o1">ચન્દ્ર</label>
+                    </br>
+                    <input type="radio" name="q1" id="q1o2" value="q1o2">
+                    <label for="q1o2">સુરજ</label>
+                    </br>
+                    <input type="radio" name="q1" id="q1o3" value="q1o3">
+                    <label for="q1o3">તારાઓ</label>
+                    </br>
+                    <input type="radio" name="q1" id="q1o4" value="q1o4">
+                    <label for="q1o4">આપેલ પૈકી એક પણ નહિ</label>
+                    </br>
+                </div>
+            </div>
+
+            <!-- ---------------------------------question one finish---------------------------------------------------------------------- -->
+
+            <div class="question" id="question2">
+                રમા પુષ્પા કરતા ઉંચી છે, પણ બીના જેટલી ઉંચી નથી, બેલા સુજાતા કરતા ઉંચી પણ પુષ્પા જેટલી ઉંચી નથી, આ બધામાં સૌથી ઉંચુ કોણ છે ?
+
+                <div class="radio">
+                    <input type="radio" name="q2" id="q2o1" value="q2o1">
+                    <label for="q2o1">બીના</label>
+                    </br>
+                    <input type="radio" name="q2" id="q1o2" value="q2o2">
+                    <label for="q2o2">રમા </label>
+                    </br>
+                    <input type="radio" name="q2" id="q2o3" value="q2o3">
+                    <label for="q2o3">સુજાતા</label>
+                    </br>
+                    <input type="radio" name="q2" id="q2o4" value="q2o4">
+                    <label for="q2o4">પુષ્પા</label>
+                    </br>
+
+                </div>
+            </div>
+            <!-- ---------------------------------question two finish---------------------------------------------------------------------- -->
+
+            <div class="question" id="question3">
+                શિવ આ નામે ઓળખાતા નથી.
+
+                <div class="radio">
+                    <input type="radio" name="q3" id="q3o1" value="q3o1">
+                    <label for="q3o1">નારાયણ</label>
+                    </br>
+                    <input type="radio" name="q3" id="q3o2" value="q3o2">
+                    <label for="q3o2">મહાદેવ</label>
+                    </br>
+                    <input type="radio" name="q3" id="q3o3" value="q3o3">
+                    <label for="q3o3">શંકર</label>
+                    </br>
+                    <input type="radio" name="q3" id="q3o4" value="q3o4">
+                    <label for="q3o4">ધૂર્જટિ</label>
+                    </br>
+
+                </div>
+            </div>
+            <!-- ----------------------------question three finish------------------------------------------------------------------------ -->
+
+            <div class="question" id="question4">
+                જનનીની જોડ સખી નહી જડે રે લોલ આ પંકિત કોની રચેલી છે ?
+
+
+                <div class="radio">
+                    <input type="radio" name="q4" id="q4o1" value="q4o1">
+                    <label for="q3o1">બોટાદકર</label>
+                    </br>
+                    <input type="radio" name="q4" id="q4o2" value="q4o2">
+                    <label for="q4o2">કલાપી</label>
+                    </br>
+                    <input type="radio" name="q4" id="q4o3" value="q4o3">
+                    <label for="q4o3">મેઘાણી </label>
+                    </br>
+                    <input type="radio" name="q4" id="q4o4" value="q4o4">
+                    <label for="q4o4">પ્રેમાનંદ</label>
+                    </br>
+
+                </div>
+            </div>
+
+            <div id="result1">
+
+            </div>
+
+            <div id="result">
+
+            </div>
+
+
+            <!-- ---------------------------------question four finish---------------------------------------------------------------------- -->
+
+
+
+
+        </form>
+    </div>
+    <button class="button" type="submit" onclick="displayRadioValue()">Submit</button>
+</body>
+<script>
+    function displayRadioValue() {
+
+        event.preventDefault();
+        var answer1 = document.getElementsByName('q1');
+        for (i = 0; i < answer1.length; i++) {
+            if (answer1[i].checked) {
+                var realAns1 = answer1[i].value;
+                // document.getElementById("result1").innerHTML = realAns1;
+            }
+        }
+        var answer2 = document.getElementsByName('q2');
+        for (i = 0; i < answer2.length; i++) {
+            if (answer2[i].checked) {
+                var realAns2 = answer2[i].value;
+                // document.getElementById("result1").innerHTML = realAns2;
+            }
+        }
+
+        var answer3 = document.getElementsByName('q3');
+        for (i = 0; i < answer3.length; i++) {
+            if (answer3[i].checked) {
+                var realAns3 = answer3[i].value;
+                // document.getElementById("result1").innerHTML = realAns3;
+            }
+        }
+
+        var answer4 = document.getElementsByName('q4');
+        for (i = 0; i < answer4.length; i++) {
+            if (answer4[i].checked) {
+                var realAns4 = answer4[i].value;
+                // document.getElementById("result1").innerHTML = realAns4;
+            }
+        }
+
+        var score = 0;
+
+        if (realAns1 == 'q1o1') {
+            score = score + 1;
+        }
+
+        if (realAns2 == 'q2o1') {
+            score = score + 1;
+        }
+
+        if (realAns3 == 'q3o1') {
+            score = score + 1;
+        }
+
+        if (realAns4 == 'q4o1') {
+            score = score + 1;
+        }
+
+        document.getElementById("result").innerHTML = "Your Score is: " + ((score) / 4) * 100 + "%";
+
+    }
+</script>
+
+</html>
